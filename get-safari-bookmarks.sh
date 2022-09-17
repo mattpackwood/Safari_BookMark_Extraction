@@ -1,6 +1,7 @@
 #!/bin/sh
 # get Safari Bookmarks
-bm="$HOME/Library/Safari/Bookmarks.plist"
+#bm="$HOME/Library/Safari/Bookmarks.plist"
+bm="$HOME/Bookmarks_test.plist"
 grep -A1 -E '(>URLString<|>title<)' $bm |
 grep -v -E '(>URLString|>title|^--)' |
 cut -d\> -f2 | cut -d\< -f1 |
